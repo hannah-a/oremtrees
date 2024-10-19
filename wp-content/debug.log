@@ -1,0 +1,23 @@
+[28-Sep-2024 20:59:32 UTC] PHP Fatal error:  Cannot redeclare wp_learn_amend_content() (previously declared in /home4/dgmuvuco/public_html/sp-oremtrees/wp-content/plugins/wp-learn-hooks.php:13) in /home4/dgmuvuco/public_html/sp-oremtrees/wp-content/themes/testtheme/functions.php on line 17
+[28-Sep-2024 20:59:35 UTC] PHP Fatal error:  Cannot redeclare wp_learn_amend_content() (previously declared in /home4/dgmuvuco/public_html/sp-oremtrees/wp-content/plugins/wp-learn-hooks.php:13) in /home4/dgmuvuco/public_html/sp-oremtrees/wp-content/themes/testtheme/functions.php on line 17
+[28-Sep-2024 21:00:03 UTC] PHP Fatal error:  Cannot redeclare wp_learn_amend_content() (previously declared in /home4/dgmuvuco/public_html/sp-oremtrees/wp-content/plugins/wp-learn-hooks.php:13) in /home4/dgmuvuco/public_html/sp-oremtrees/wp-content/themes/testtheme/functions.php on line 17
+[28-Sep-2024 21:00:06 UTC] PHP Fatal error:  Cannot redeclare wp_learn_amend_content() (previously declared in /home4/dgmuvuco/public_html/sp-oremtrees/wp-content/plugins/wp-learn-hooks.php:13) in /home4/dgmuvuco/public_html/sp-oremtrees/wp-content/themes/testtheme/functions.php on line 17
+[28-Sep-2024 21:01:38 UTC] PHP Fatal error:  Cannot redeclare wp_learn_amend_content() (previously declared in /home4/dgmuvuco/public_html/sp-oremtrees/wp-content/plugins/wp-learn-hooks.php:13) in /home4/dgmuvuco/public_html/sp-oremtrees/wp-content/themes/testtheme/functions.php on line 17
+[28-Sep-2024 21:21:39 UTC] PHP Deprecated:  Function print_emoji_styles is <strong>deprecated</strong> since version 6.4.0! Use wp_enqueue_emoji_styles instead. in /home4/dgmuvuco/public_html/sp-oremtrees/wp-includes/functions.php on line 6085
+[28-Sep-2024 21:22:48 UTC] PHP Deprecated:  Function print_emoji_styles is <strong>deprecated</strong> since version 6.4.0! Use wp_enqueue_emoji_styles instead. in /home4/dgmuvuco/public_html/sp-oremtrees/wp-includes/functions.php on line 6085
+[28-Sep-2024 21:22:49 UTC] PHP Deprecated:  Function print_emoji_styles is <strong>deprecated</strong> since version 6.4.0! Use wp_enqueue_emoji_styles instead. in /home4/dgmuvuco/public_html/sp-oremtrees/wp-includes/functions.php on line 6085
+[28-Sep-2024 21:22:51 UTC] PHP Deprecated:  Function print_emoji_styles is <strong>deprecated</strong> since version 6.4.0! Use wp_enqueue_emoji_styles instead. in /home4/dgmuvuco/public_html/sp-oremtrees/wp-includes/functions.php on line 6085
+[29-Sep-2024 16:41:57 UTC] Automatic updates starting...
+[29-Sep-2024 16:41:57 UTC] Automatic updates complete.
+[30-Sep-2024 06:09:40 UTC] Automatic updates starting...
+[30-Sep-2024 06:09:41 UTC] Automatic updates complete.
+[30-Sep-2024 16:10:37 UTC] Automatic updates starting...
+[30-Sep-2024 16:10:38 UTC] Automatic updates complete.
+[01-Oct-2024 12:19:47 UTC] Automatic updates starting...
+[01-Oct-2024 12:19:48 UTC]   Automatic plugin updates starting...
+[01-Oct-2024 12:19:48 UTC]   Automatic plugin updates complete.
+[01-Oct-2024 12:19:48 UTC] Automatic updates complete.
+[01-Oct-2024 17:32:57 UTC] Automatic updates starting...
+[01-Oct-2024 17:32:57 UTC]   Automatic plugin updates starting...
+[01-Oct-2024 17:32:57 UTC]   Automatic plugin updates complete.
+[01-Oct-2024 17:32:57 UTC] Automatic updates complete.
