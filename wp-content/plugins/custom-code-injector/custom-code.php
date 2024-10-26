@@ -53,9 +53,6 @@ function cci_options_page() {
 
 // Register settings and add fields
 function cci_settings_init() {
-    register_setting('cci_options_group', 'cci_custom_css', 'cci_save_css_code');
-    register_setting('cci_options_group', 'cci_homepage_js', 'cci_save_homepage_js_code');
-    register_setting('cci_options_group', 'cci_about_js', 'cci_save_about_js_code');
 
     add_settings_section('cci_section', 'Custom Code Settings', null, 'custom-code-injector');
 
