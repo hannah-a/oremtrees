@@ -1,0 +1,1 @@
+alert('Hello from new plugin2')
