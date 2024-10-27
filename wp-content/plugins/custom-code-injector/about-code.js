@@ -1,1 +1,1 @@
-console.log('blue')
+console.log('Hello from the Custom Code Injector plugin!');

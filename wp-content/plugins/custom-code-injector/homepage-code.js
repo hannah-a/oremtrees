@@ -1,1 +1,1 @@
-console.log('red')
+console.log('this is homepage code');
