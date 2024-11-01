@@ -54,6 +54,7 @@ export default function Edit( { attributes, setAttributes } ) {
 			) }
 		 &copy; { startingYear } - { currentYear }
 		</p>
+	
 		</>
 	);
 }

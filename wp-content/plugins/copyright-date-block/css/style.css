@@ -5,7 +5,18 @@
  * Replace them with your own styles or remove the file completely.
  */
 .wp-block-copyright-date-copyright-date-block {
-  border: 1px solid #111111;
-  padding: 5px;
-  background-color: red;
+  position: relative;
+  padding: 10px;
+  background-color: rgb(211, 210, 210);
+  border-radius: 15px;
+  width: fit-content;
+}
+
+.copyright-green-leaf {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 200px;
+  height: 200px;
+  z-index: -2;
 }/*# sourceMappingURL=style.css.map */
