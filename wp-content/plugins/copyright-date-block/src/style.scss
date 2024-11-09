@@ -5,8 +5,19 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-copyright-date-block {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+ .wp-block-copyright-date-copyright-date-block {
+    position: relative;
+    padding: 10px;
+	background-color: rgb(211, 210, 210);
+    border-radius: 15px;
+    width: fit-content;
+}
+
+.copyright-green-leaf {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 200px;
+    height: 200px;
+    z-index: -2;
 }
