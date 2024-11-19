@@ -25,6 +25,7 @@
 //     [51.51, -0.047]
 // ]).addTo(map);
 
+
 var jahjMap = L.map('map', { //custom image map
     crs: L.CRS.Simple,
     minZoom: -1,
@@ -35,11 +36,12 @@ var jahjMap = L.map('map', { //custom image map
 	}
 })
 
-var jahjBounds = [[0,0], [472,642]];
+var jahjBounds = [[0,0], [542,722]];
 
-var jahjImage = L.imageOverlay('https://oremtrees.dgmuvu.com/wp-content/uploads/2024/11/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7-2024-11-10-172222.png', jahjBounds).addTo(jahjMap);
+var jahjImage = L.imageOverlay('https://oremtrees.dgmuvu.com/wp-content/uploads/2024/11/OremCityCenterPark_DroneShot_Map.jpg', jahjBounds).addTo(jahjMap);
 
 jahjMap.fitBounds(jahjBounds);
+jahjMap.setZoom(0);
 
 function jahjModalTree(src, name){
     return `
