@@ -2,9 +2,9 @@
 /*
 Plugin Name: Custom Code Injector
 Plugin URI: https://example.com
-Description: Display custom CSS and JavaScript code from files in the admin panel.
+Description: Inject custom CSS and JavaScript code to specific pages.
 Version: 1.0
-Author: Your Name
+Author: Joonsung Byun
 Author URI: https://example.com
 */
 
@@ -13,7 +13,8 @@ if (!defined('ABSPATH')) {
 }
 
 // Add admin menu
-function cci_add_admin_menu() {
+function cci_add_admin_menu()
+{
     add_menu_page(
         'Custom Code Injector', // Page title
         'Custom Code', // Menu title
@@ -26,13 +27,12 @@ add_action('admin_menu', 'cci_add_admin_menu');
 
 // Options page
 function cci_options_page() {
-    // 파일 경로 설정
+    
     $plugin_dir = plugin_dir_path(__FILE__);
     $css_file = $plugin_dir . 'custom-code.css';
     $homepage_js_file = $plugin_dir . 'homepage-code.js';
     $about_js_file = $plugin_dir . 'about-code.js';
 
-    // 파일 내용 읽기
     $custom_css = file_exists($css_file) ? file_get_contents($css_file) : '';
     $homepage_js = file_exists($homepage_js_file) ? file_get_contents($homepage_js_file) : '';
     $about_js = file_exists($about_js_file) ? file_get_contents($about_js_file) : '';
@@ -42,41 +42,48 @@ function cci_options_page() {
         <h1>Custom Code Injector</h1>
         <h2>Custom CSS Code</h2>
         <textarea rows="10" cols="50" readonly><?php echo esc_textarea($custom_css); ?></textarea>
-        
+
         <h2>Homepage JavaScript Code</h2>
         <textarea rows="10" cols="50" readonly><?php echo esc_textarea($homepage_js); ?></textarea>
-        
+
         <h2>About Page JavaScript Code</h2>
         <textarea rows="10" cols="50" readonly><?php echo esc_textarea($about_js); ?></textarea>
     </div>
-    
     <?php
 }
 
-// Load custom CSS and JavaScript on the website
+
 function cci_insert_custom_code() {
+    if (!is_page()) {
+        return;
+        //return!!!!!!!!!!!
+    }
+
+    global $post;
     $plugin_url = plugin_dir_url(__FILE__);
+    $page_slug = $post->post_name; // Get the page slug, for exmaple, if the user in on tress/pine-tree, the slug is pine-tree
 
-    // Custom CSS
-    $css_file_url = $plugin_url . 'custom-code.css';
-    echo '<link rel="stylesheet" href="' . esc_url($css_file_url) . '">';
-
-    // Homepage JavaScript
-    if (is_front_page()) {
-        $homepage_js_file_url = $plugin_url . 'homepage-code.js';
-        echo '<script src="' . esc_url($homepage_js_file_url) . '"></script>';
+    // if the page url: /trees/home, then load the trees-home.js file and trees-home.css file
+    if ($page_slug === 'trees/home') {
+        wp_enqueue_script('trees-home-js', $plugin_url . 'js/trees-home.js', array(), null, true);
+        wp_enqueue_style('trees-home-css', $plugin_url . 'css/trees-home.css');
+    }  
+    //if the page url: /trees/about, then load the trees-about.js file and trees-about.css file 
+    elseif ($page_slug === 'trees/about' || is_page(72)) {
+        wp_enqueue_script('trees-about-js', $plugin_url . 'js/trees-about.js', array(), null, true);
+        wp_enqueue_style('trees-about-css', $plugin_url . 'css/trees-about.css');
+    } 
+        elseif ($page_slug === 'trees/about' || is_page(97)) {
+        wp_enqueue_script('eachTree-js', $plugin_url . 'js/eachTree.js', array(), null, true);
+        wp_enqueue_style('eachTree-css', $plugin_url . 'css/eachTree.css');
+    } 
+    // if the page url: /trees/* but not /trees/home or /trees/about, then load the trees-code.js file and trees-code.css file
+    elseif (strpos($page_slug, 'trees/') === 0) {
+        wp_enqueue_script('trees-code-js', $plugin_url . 'js/trees-code.js', array(), null, true);
+        wp_enqueue_style('trees-code-css', $plugin_url . 'css/trees-code.css');
     }
 
-    // About Page JavaScript
-    if (is_page(72)) { 
-        $about_js_file_url = $plugin_url . 'about-code.js';
-        echo '<script src="' . esc_url($about_js_file_url) . '"></script>';
-    }
-
-    if (is_page(75)) { 
-        $contact_js_file_url = $plugin_url . 'contact-code.js';
-        echo '<script src="' . esc_url($contact_js_file_url) . '"></script>';
-    }
-
+    
 }
-add_action('wp_head', 'cci_insert_custom_code');
+add_action('wp_enqueue_scripts', 'cci_insert_custom_code');
+
