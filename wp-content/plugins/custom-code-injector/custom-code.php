@@ -73,11 +73,17 @@ function cci_insert_custom_code() {
         wp_enqueue_script('trees-about-js', $plugin_url . 'js/trees-about.js', array(), null, true);
         wp_enqueue_style('trees-about-css', $plugin_url . 'css/trees-about.css');
     } 
+        elseif ($page_slug === 'trees/about' || is_page(97)) {
+        wp_enqueue_script('eachTree-js', $plugin_url . 'js/eachTree.js', array(), null, true);
+        wp_enqueue_style('eachTree-css', $plugin_url . 'css/eachTree.css');
+    } 
     // if the page url: /trees/* but not /trees/home or /trees/about, then load the trees-code.js file and trees-code.css file
     elseif (strpos($page_slug, 'trees/') === 0) {
         wp_enqueue_script('trees-code-js', $plugin_url . 'js/trees-code.js', array(), null, true);
         wp_enqueue_style('trees-code-css', $plugin_url . 'css/trees-code.css');
     }
+
+    
 }
 add_action('wp_enqueue_scripts', 'cci_insert_custom_code');
 

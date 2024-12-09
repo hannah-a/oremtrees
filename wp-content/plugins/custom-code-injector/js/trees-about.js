@@ -53,6 +53,7 @@ function jahjModalTree(src, name){
 }
 
 
+
 // document.querySelector("#jajhOpenModal").addEventListener("click", function(){
 //     document.querySelector('#map').remove()
 
