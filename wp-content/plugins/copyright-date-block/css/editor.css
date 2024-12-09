@@ -1,0 +1,18 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-copyright-date-copyright-date-block {
+  border: 3px dotted #f00;
+  background-color: rgb(5, 81, 173);
+  color: purple;
+}/*# sourceMappingURL=editor.css.map */
+
+.wp-block-create-block-copyright-date-block {
+  background-color: #21759b;
+  color: #fff;
+  padding: 2px;
+  color: purple;
+
+}
