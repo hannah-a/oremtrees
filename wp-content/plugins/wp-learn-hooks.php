@@ -8,5 +8,5 @@
 add_filter( 'the_content', 'wp_learn_amend_content' );
 
 function wp_learn_amend_content( $content ) {
-    return $content . '<p>Thanks for reading!</p>';
+    return $content . '<p></p>';
 }

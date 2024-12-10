@@ -158,43 +158,27 @@ html body {
         }
       }
     }
-
-    /* figure {
-        margin: 0;
-      }
-
-      h3 {
-      font-size: 18px;
-      font-weight: bold;
-      }
-    
-      p {
-        font-size: 16px;
-        margin:0;
-
-
-      } */
   }
   .identification-div::after {
     border-radius: 14px;
     content: "";
     position: absolute;
-    width: 2px; /* 테두리 두께 */
-    height: 100%; /* 테두리가 중간에 사라지는 효과 */
+    width: 2px; 
+    height: 100%; 
     background-color: #eeeeee;
-    top: 15%; /* 중간에 위치하도록 */
-    right: 0; /* 오른쪽에 위치 */
+    top: 15%; 
+    right: 0; 
   }
 
   .identification-div::before {
     border-radius: 14px;
     content: "";
     position: absolute;
-    width: 2px; /* 테두리 두께 */
-    height: 100%; /* 테두리가 중간에 사라지는 효과 */
+    width: 2px; 
+    height: 100%; 
     background-color: #eeeeee;
-    top: 15%; /* 중간에 위치하도록 */
-    left: 0; /* 왼쪽에 위치 */
+    top: 15%; 
+    left: 0; 
   }
 }
 
@@ -280,6 +264,168 @@ html body {
   top: 185px;
   left: 50%;
   transform: translateX(-50%);
-  /* max-width: 148%; */
+
   z-index: 80;
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+
+swiper-slide {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  align-items: center;
+  border-radius: 14px; 
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: none; 
+  position: relative; 
+  overflow: hidden; 
+  .eachFigure-container {
+    figure {
+      margin-bottom: 20px;
+    }
+  }
+
+  .funFact-text-container {
+    padding:  8px 20px 9px 20px;
+    h3 {
+      margin: 0;
+      margin-bottom: 20px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    p{
+      margin-bottom: 6px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      
+    }
+  }
+}
+
+swiper-slide::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6px; 
+  background: linear-gradient(
+  to bottom,
+  #bfbfbf 0%,  
+  #d6d6d6 20%, 
+  #e0e0e0 40%, 
+  #ebebeb 60%, 
+  #f2f2f2 80%, 
+  #f5f5f5 100% 
+);
+  border-radius: 0 0 5px 5px; 
+}
+}
+
+
+.economic-div {
+  padding: 20px;
+  h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .economic-ul{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight:400;
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 24px;
+  }
+}
+
+.wp-block-details {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+  summary {
+    display: flex; /* 내용과 마커를 가로로 배치 */
+    justify-content: space-between; /* 양 끝에 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    cursor: pointer; /* 클릭 가능한 마우스 커서 */
+    list-style: none; /* 기본 마커 숨기기 */
+    outline: none;
+    padding: 20px;
+    .custom-marker {
+      width: 18px;
+      transform: rotate(180deg);
+    }
+    .active {
+      transform: rotate(0deg);
+    }
+
+  }
+  summary::marker {
+    content: none; /* 기본 마커 제거 */
+  }
+
+  ul {
+    list-style-position: inside;
+    border-top: 1px solid black;
+    word-wrap: break-word; /* 오래된 브라우저 호환성을 위해 추가 */
+    overflow-wrap: break-word; /* 최신 브라우저에서 단어 단위 줄바꿈 */
+    white-space: normal; /* 텍스트가 강제로 한 줄에 남지 않도록 설정 */
+    padding: 20px;
+    padding-bottom: 20px;
+   }
+  span {
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+}
+
+.wp-block-details:last-of-type {
+  margin-bottom: 0px;
+}
+
+.footer-top {
+  background-color: #d8ded8;
+  padding: 20px;
+
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    p {
+      font-size: 14px;
+      text-align: center;
+      margin: 0;
+      font-weight: 400;
+      font-family: 'Roboto', sans-serif;
+    }
+}
+
+.footer-bottom {
+  background-color: #302f2f;
+  color: #ffffff;
+  padding: 20px;
+    font-family: 'Roboto', sans-serif;
+
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    p {
+      font-size: 14px;
+      text-align: center;
+      margin: 0;
+      font-weight: 400;
+      font-family: 'Roboto', sans-serif;
+    }
 }

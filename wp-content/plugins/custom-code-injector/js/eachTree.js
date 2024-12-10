@@ -16,3 +16,14 @@ readMoreBtn.addEventListener('click', () => {
         chevronIcon.style.transform = 'rotate(0deg)'
     }
 })
+
+const resourcesBtn = document.querySelector('.custom-maker1')
+const referencesBtn = document.querySelector('.custom-maker2')
+
+resourcesBtn.addEventListener('click', () => {
+    resourcesBtn.classList.toggle('active')
+})
+
+referencesBtn.addEventListener('click', () => {
+    referencesBtn.classList.toggle('active')
+})
